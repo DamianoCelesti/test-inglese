@@ -1,0 +1,263 @@
+// src/tests/test1.js
+
+
+export const MULTIPLE_CHOICE = [
+    {
+        id: 1,
+        text: "Students usually ____ their assignments on time.",
+        options: ["submits", "submit", "submitting"],
+        correctIndex: 1,
+        explanation: {
+            correct: `"Students" è plurale, quindi al Present Simple si usa la forma base del verbo: "submit".
+"Usually" indica un’abitudine/azione ripetuta → Present Simple.
+Perciò: "Students usually submit their assignments on time."`,
+            wrongByIndex: {
+                0: `"submits" è la 3ª persona singolare (he/she/it). Con "students" (plurale) non va bene: serve la forma base "submit".`,
+                2: `"submitting" è una forma in -ing (gerundio/participio). Qui serve un verbo finito (Present Simple), quindi "submit".`,
+            },
+        },
+    },
+    {
+        id: 2,
+        text: "The lecturer ____ a new course this semester.",
+        options: ["is teaching", "teaches", "taught"],
+        correctIndex: 0,
+        explanation: {
+            correct: `"This semester" spesso descrive un periodo in corso e temporaneo.
+Per un’azione temporanea/situazione attuale in corso, si usa spesso il Present Continuous: "is teaching".
+Quindi: "The lecturer is teaching a new course this semester."`,
+            wrongByIndex: {
+                1: `"teaches" (Present Simple) si usa per abitudini o fatti generali/stabili. Qui l’idea è un incarico temporaneo “in questo semestre”, quindi meglio Present Continuous.`,
+                2: `"taught" è Past Simple: indicherebbe un’azione conclusa nel passato, ma "this semester" qui è inteso come periodo attuale.`,
+            },
+        },
+    },
+    {
+        id: 3,
+        text: "The class is silent because they ____ to a presentation.",
+        options: ["listen", "are listening", "listened"],
+        correctIndex: 1,
+        explanation: {
+            correct: `"The class is silent" descrive una situazione adesso.
+La causa è un’azione in corso adesso → Present Continuous: "are listening".
+Quindi: "…because they are listening to a presentation."`,
+            wrongByIndex: {
+                0: `"listen" (Present Simple) indica abitudine o fatto generale, non un’azione in corso nel momento presente come suggerisce "is silent".`,
+                2: `"listened" (Past Simple) sposta l’azione nel passato e non combacia con la situazione presente ("is silent").`,
+            },
+        },
+    },
+    {
+        id: 4,
+        text: "The computer lab is ____ the library and the main office.",
+        options: ["between", "behind", "under"],
+        correctIndex: 0,
+        explanation: {
+            correct: `Quando qualcosa si trova “nel mezzo” di due luoghi/punti, si usa "between".
+Qui hai due riferimenti: "the library" e "the main office" → "between A and B".
+Quindi: "…is between the library and the main office."`,
+            wrongByIndex: {
+                1: `"behind" significa “dietro” e non esprime l’idea di “in mezzo a due luoghi”. Inoltre non usa la struttura "between A and B".`,
+                2: `"under" significa “sotto” (posizione inferiore), non “tra due posti”.`,
+            },
+        },
+    },
+    {
+        id: 5,
+        text: "Yesterday the tutor ____ the exam instructions carefully.",
+        options: ["explains", "explained", "is explaining"],
+        correctIndex: 1,
+        explanation: {
+            correct: `"Yesterday" è un marcatore di tempo passato → Past Simple.
+Il verbo "explain" al Past Simple è "explained".
+Quindi: "Yesterday the tutor explained the exam instructions carefully."`,
+            wrongByIndex: {
+                0: `"explains" è Present Simple e non si usa con "yesterday" (passato).`,
+                2: `"is explaining" è Present Continuous (azione in corso nel presente), ma "yesterday" richiede un tempo passato.`,
+            },
+        },
+    },
+    {
+        id: 6,
+        text: "While the students ____ notes, the professor spoke slowly.",
+        options: ["take", "are taking", "were taking"],
+        correctIndex: 2,
+        explanation: {
+            correct: `Struttura tipica nel racconto al passato:
+"While" + Past Continuous (azione in corso) + Past Simple (evento parallelo).
+Qui: students (azione lunga) → "were taking"; professor (evento) → "spoke".
+Quindi: "While the students were taking notes, the professor spoke slowly."`,
+            wrongByIndex: {
+                0: `"take" è Present Simple: non è coerente con "spoke" (passato) e con la struttura "while" in un contesto narrativo al passato.`,
+                1: `"are taking" è Present Continuous (presente), ma la frase è al passato ("spoke"). Serve Past Continuous: "were taking".`,
+            },
+        },
+    },
+    {
+        id: 7,
+        text: "Next month we ____ an English proficiency test.",
+        options: ["take", "are taking", "took"],
+        correctIndex: 0,
+        explanation: {
+            correct: `"Next month" parla di futuro.
+Tra le opzioni, "take" è la forma più neutra/corretta per esprimere un evento futuro programmato (stile “in calendario”).
+Quindi: "Next month we take an English proficiency test."`,
+            wrongByIndex: {
+                1: `"are taking" (Present Continuous) si usa per un piano già fissato/organizzato. Può essere possibile, ma l’esercizio di solito punta alla forma base neutra "take" in questo tipo di frase.`,
+                2: `"took" è Past Simple: contraddice "next month" (futuro).`,
+            },
+        },
+    },
+    {
+        id: 8,
+        text: "A good teacher ____ encourages students to ask questions.",
+        options: ["never", "always", "rarely"],
+        correctIndex: 1,
+        explanation: {
+            correct: `La frase descrive una caratteristica generale di “un bravo insegnante”.
+L’avverbio più coerente è "always" (sempre), perché rafforza l’idea positiva.
+Quindi: "A good teacher always encourages students to ask questions."`,
+            wrongByIndex: {
+                0: `"never" (mai) contraddice il significato di “good teacher”, perché un buon insegnante non incoraggia “mai”.`,
+                2: `"rarely" (raramente) rende la frase poco sensata: un buon insegnante dovrebbe incoraggiare spesso, non raramente.`,
+            },
+        },
+    },
+    {
+        id: 9,
+        text: "University students ____ work independently.",
+        options: ["seldom", "usually", "never"],
+        correctIndex: 1,
+        explanation: {
+            correct: `È una generalizzazione realistica: gli studenti universitari "usually" (di solito) lavorano in modo indipendente.
+"Usually" indica frequenza alta ma non assoluta (più credibile di "always/never").`,
+            wrongByIndex: {
+                0: `"seldom" (raramente) suggerisce che lavorino quasi mai in modo indipendente, che è l’opposto di ciò che normalmente si intende per università.`,
+                2: `"never" (mai) è troppo assoluto e poco realistico: non è credibile come affermazione generale.`,
+            },
+        },
+    },
+    {
+        id: 10,
+        text: "The classroom walls are ____ educational charts.",
+        options: ["full of", "between", "under"],
+        correctIndex: 0,
+        explanation: {
+            correct: `L’espressione fissa è "be full of" = “essere pieni di”.
+Qui significa che sulle pareti ci sono molti poster/tabelle.
+Quindi: "The classroom walls are full of educational charts."`,
+            wrongByIndex: {
+                1: `"between" richiede due elementi (between A and B). "Walls are between..." non ha senso in questa struttura.`,
+                2: `"under" significa “sotto”: non descrive che le pareti siano “piene di” charts. Semmai i charts possono essere "on" the walls.`,
+            },
+        },
+    },
+];
+
+export const GAP_FILL = [
+    {
+        id: 1,
+        text: "The lesson usually ______ (begin) at nine o'clock.",
+        answers: ["begins"],
+        explanation: {
+            correct: `"Usually" indica un’abitudine → Present Simple.
+Il soggetto "The lesson" è 3ª persona singolare (it), quindi il verbo prende -s: begin → begins.`,
+            wrong: `Qui serve il Present Simple alla 3ª persona singolare: se scrivi "begin" senza -s, stai usando la forma base (plurale/infinitiva) e non è corretta con "the lesson".`,
+        },
+    },
+    {
+        id: 2,
+        text: "At the moment, the students ______ (study) for the exam.",
+        answers: ["are studying"],
+        explanation: {
+            correct: `"At the moment" indica “adesso” → Present Continuous.
+Soggetto plurale "students" → "are" + verbo in -ing: study → studying.`,
+            wrong: `Con "at the moment" si descrive un’azione in corso adesso: quindi serve "are + -ing". Forme come "study" (Present Simple) non rendono l’idea di “adesso”.`,
+        },
+    },
+    {
+        id: 3,
+        text: "The staff room is ______ the first floor.",
+        answers: ["on"],
+        explanation: {
+            correct: `Per i piani di un edificio in inglese si usa "on": "on the first floor".`,
+            wrong: `Per i piani (floor) si usa "on", non "in/at". "In the first floor" è un errore comune.`,
+        },
+    },
+    {
+        id: 4,
+        text: "Last semester we ______ (complete) a research project.",
+        answers: ["completed"],
+        explanation: {
+            correct: `"Last semester" è un riferimento concluso nel passato → Past Simple.
+Verbo regolare: complete → completed.`,
+            wrong: `Con un tempo finito e concluso ("last semester") serve il Past Simple. Usare forme al presente (complete/completes) non è coerente.`,
+        },
+    },
+    {
+        id: 5,
+        text: "While she ______ (correct) the tests, the students waited.",
+        answers: ["was correcting"],
+        explanation: {
+            correct: `Con "while" in un racconto al passato si usa spesso il Past Continuous per l’azione in corso.
+Soggetto "she" → "was" + -ing: was correcting.
+L’altra azione "waited" è Past Simple.`,
+            wrong: `Qui serve un’azione “in corso” nel passato (Past Continuous). Forme come "corrected" (Past Simple) cambiano il significato: sembrerebbe un’azione completata, non in svolgimento mentre gli studenti aspettavano.`,
+        },
+    },
+    {
+        id: 6,
+        text: "Tomorrow we ______ (meet) our academic advisor.",
+        answers: ["are meeting", "will meet"],
+        explanation: {
+            correct: `"Tomorrow" parla di futuro.
+- "are meeting" (Present Continuous) = appuntamento già organizzato.
+- "will meet" = futuro più generale/decisione/previsione.
+Entrambe sono corrette a seconda del contesto.`,
+            wrong: `Qualsiasi forma al passato ("met") o al presente semplice senza valore di programma in questo contesto non è coerente con "tomorrow". Qui servono strutture di futuro (are meeting / will meet).`,
+        },
+    },
+    {
+        id: 7,
+        text: "Teachers ______ (provide) feedback regularly.",
+        answers: ["provide"],
+        explanation: {
+            correct: `È una frase generale/abituale → Present Simple.
+Soggetto plurale "Teachers" → forma base del verbo: provide (senza -s).`,
+            wrong: `Con soggetto plurale non si mette -s al Present Simple. "Provides" sarebbe 3ª persona singolare (he/she/it).`,
+        },
+    },
+    {
+        id: 8,
+        text: "The whiteboard is ______ the door.",
+        answers: ["on", "near", "next to"],
+        explanation: {
+            correct: `Qui dipende dal significato:
+- "on the door" = attaccata/sulla porta (possibile),
+- "near the door" = vicino,
+- "next to the door" = accanto.
+Senza contesto, più opzioni possono essere accettate.`,
+            wrong: `Se scrivi una preposizione che cambia completamente la posizione (es. "under/behind/between") senza contesto, non è coerente con l’idea tipica di lavagna e porta. Qui si accettano preposizioni di vicinanza o contatto.`,
+        },
+    },
+    {
+        id: 9,
+        text: "Two years ago, the university ______ (open) a new library.",
+        answers: ["opened"],
+        explanation: {
+            correct: `"Two years ago" indica passato concluso → Past Simple.
+Verbo regolare: open → opened.`,
+            wrong: `Con "ago" si usa Past Simple, non Present Simple ("opens") né Present Continuous ("is opening").`,
+        },
+    },
+    {
+        id: 10,
+        text: "Listen! The students ______ (discuss) the topic.",
+        answers: ["are discussing"],
+        explanation: {
+            correct: `"Listen!" è un segnale che l’azione sta accadendo adesso → Present Continuous.
+Soggetto plurale "students" → "are discussing".`,
+            wrong: `Quando c’è "Listen!/Look!" l’inglese usa il Present Continuous per azioni in corso. Scrivere "discuss" (Present Simple) suona come abitudine, non “adesso”.`,
+        },
+    },
+];

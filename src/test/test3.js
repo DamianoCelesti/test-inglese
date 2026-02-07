@@ -1,0 +1,251 @@
+// src/test/test3.js
+
+
+export const MULTIPLE_CHOICE = [
+    {
+        id: 1,
+        text: "If I ____ enough time, I would join the club.",
+        options: ["have", "had", "will have"],
+        correctIndex: 1,
+        explanation: {
+            correct: `È una Second Conditional (situazione ipotetica nel presente):
+If + Past Simple, would + base form.
+Quindi: "If I had enough time, I would join the club."`,
+            wrongByIndex: {
+                0: `"have" (Present Simple) si usa nella First Conditional (If + Present, will...). Qui c'è "would", quindi serve Second Conditional.`,
+                2: `"will have" non si usa nella if-clause della Second Conditional. "Would" richiede Past Simple dopo "if".`,
+            },
+        },
+    },
+    {
+        id: 2,
+        text: "She ____ speak English very well when she was a child.",
+        options: ["can't", "could", "should"],
+        correctIndex: 1,
+        explanation: {
+            correct: `"Could" è il passato di "can" e si usa per abilità nel passato:
+"She could speak English..."`,
+            wrongByIndex: {
+                0: `"can't" è presente e negativo: non è coerente con "when she was a child" (passato).`,
+                2: `"should" esprime consiglio/obbligo leggero, non abilità nel passato.`,
+            },
+        },
+    },
+    {
+        id: 3,
+        text: "This is the book ____ I told you about.",
+        options: ["who", "which", "where"],
+        correctIndex: 1,
+        explanation: {
+            correct: `Per cose/oggetti si usa "which" (relative clause).
+Quindi: "This is the book which I told you about."`,
+            wrongByIndex: {
+                0: `"who" si usa per persone, non per "book".`,
+                2: `"where" si usa per luoghi, non per oggetti.`,
+            },
+        },
+    },
+    {
+        id: 4,
+        text: "I have ____ finished my homework, so I can go out now.",
+        options: ["already", "yet", "still"],
+        correctIndex: 0,
+        explanation: {
+            correct: `"Already" si usa spesso in frasi affermative al Present Perfect per dire “già”.
+"I have already finished..."`,
+            wrongByIndex: {
+                1: `"yet" si usa tipicamente in negative e domande (I haven't finished yet / Have you finished yet?). In affermativa è meno naturale qui.`,
+                2: `"still" significa “ancora” e di solito si usa con frasi negative/continuative (I still haven't finished). Non ha senso con "finished" e "so I can go out now".`,
+            },
+        },
+    },
+    {
+        id: 5,
+        text: "The new smartphone is ____ expensive than the old one.",
+        options: ["most", "more", "much"],
+        correctIndex: 1,
+        explanation: {
+            correct: `Con "than" serve un comparativo: "more ... than".`,
+            wrongByIndex: {
+                0: `"most" è superlativo (il più...) e non si usa con "than".`,
+                2: `"much" può intensificare un comparativo (much more), ma da solo non forma il comparativo.`,
+            },
+        },
+    },
+    {
+        id: 6,
+        text: "By the time we arrived, the film ____ .",
+        options: ["started", "had started", "has started"],
+        correctIndex: 1,
+        explanation: {
+            correct: `Quando un’azione è avvenuta prima di un’altra nel passato, si usa Past Perfect:
+"had started" (prima) + "arrived" (dopo).
+Quindi: "By the time we arrived, the film had started."`,
+            wrongByIndex: {
+                0: `"started" (Past Simple) non evidenzia chiaramente che l'azione è precedente a "arrived". Qui l'esercizio punta proprio al Past Perfect.`,
+                2: `"has started" (Present Perfect) si riferisce al presente, non è coerente con "arrived" (passato).`,
+            },
+        },
+    },
+    {
+        id: 7,
+        text: "You ____ wear a uniform at this school. It's optional.",
+        options: ["mustn't", "don't have to", "should"],
+        correctIndex: 1,
+        explanation: {
+            correct: `"Don't have to" significa “non è necessario / non devi per forza”.
+Se è opzionale, non c'è obbligo.`,
+            wrongByIndex: {
+                0: `"mustn't" significa “è vietato” (proibizione), non “opzionale”.`,
+                2: `"should" è un consiglio: non esprime “non è obbligatorio”.`,
+            },
+        },
+    },
+    {
+        id: 8,
+        text: "I ____ seen that movie twice, but I'd like to watch it again.",
+        options: ["have", "did", "am"],
+        correctIndex: 0,
+        explanation: {
+            correct: `Esperienza nella vita (senza tempo passato specifico) → Present Perfect:
+"I have seen..."`,
+            wrongByIndex: {
+                1: `"did seen" è scorretto: con "did" serve base form ("see"). Inoltre qui non c'è un tempo passato specifico (yesterday, in 2020), quindi meglio Present Perfect.`,
+                2: `"am seen" è grammaticalmente sbagliato: non è una forma corretta per dire “ho visto”.`,
+            },
+        },
+    },
+    {
+        id: 9,
+        text: "While he ____ dinner, the phone rang.",
+        options: ["cooked", "was cooking", "cooks"],
+        correctIndex: 1,
+        explanation: {
+            correct: `Azione in corso nel passato (durativa) + evento: Past Continuous + Past Simple.
+"was cooking" (in corso) + "rang" (evento).`,
+            wrongByIndex: {
+                0: `"cooked" (Past Simple) suona come azione completata, non “in corso mentre...”. L’esercizio vuole il contrasto con "rang".`,
+                2: `"cooks" è presente e non è coerente con "rang" (passato).`,
+            },
+        },
+    },
+    {
+        id: 10,
+        text: "Can you tell me ____ the nearest bus stop is?",
+        options: ["what", "where", "which"],
+        correctIndex: 1,
+        explanation: {
+            correct: `Qui serve un "wh-word" per la posizione: "where".
+"Can you tell me where the nearest bus stop is?"`,
+            wrongByIndex: {
+                0: `"what" chiede cos'è una cosa, non dove si trova.`,
+                2: `"which" chiede di scegliere tra opzioni (quale fermata), ma qui chiedi la posizione (“dove è”).`,
+            },
+        },
+    },
+];
+
+export const GAP_FILL = [
+    {
+        id: 1,
+        text: "If she ______ (study) more, she would pass the exam.",
+        answers: ["studied"],
+        explanation: {
+            correct: `Second Conditional: If + Past Simple, would + base form.
+Quindi: "If she studied more, she would pass..."`,
+            wrong: `Con "would" nella principale, dopo "if" serve Past Simple (studied), non Present Simple e non "will".`,
+        },
+    },
+    {
+        id: 2,
+        text: "I ______ (not / see) him since last week.",
+        answers: ["haven't seen", "have not seen"],
+        explanation: {
+            correct: `"Since" + punto di inizio → Present Perfect.
+Negativa: haven't seen / have not seen.`,
+            wrong: `Con "since" si usa Present Perfect, non Past Simple. Inoltre "see" al participio è "seen".`,
+        },
+    },
+    {
+        id: 3,
+        text: "This exercise is ______ (easy) than the previous one.",
+        answers: ["easier"],
+        explanation: {
+            correct: `Comparativo di "easy" → "easier" (y → ier).
+Con "than" serve il comparativo.`,
+            wrong: `Non puoi usare "easy" (positivo) o "easiest" (superlativo) con "than". Serve "easier".`,
+        },
+    },
+    {
+        id: 4,
+        text: "By 2020, they ______ (already / move) to a new house.",
+        answers: ["had already moved"],
+        explanation: {
+            correct: `Un’azione completata prima di un momento nel passato ("By 2020") → Past Perfect.
+"move" → "moved": had already moved.`,
+            wrong: `Con "By + anno nel passato" spesso l’esercizio richiede Past Perfect (had moved), non Present Perfect (have moved).`,
+        },
+    },
+    {
+        id: 5,
+        text: "You ______ (not / have to) bring food. We have enough.",
+        answers: ["don't have to", "do not have to"],
+        explanation: {
+            correct: `"Don't have to" = non è necessario / non è obbligatorio.
+Qui è perfetto perché “we have enough”.`,
+            wrong: `Non confondere con "mustn't" (divieto). Qui non è proibito portare cibo: semplicemente non è necessario.`,
+        },
+    },
+    {
+        id: 6,
+        text: "While I ______ (read), my brother was watching TV.",
+        answers: ["was reading"],
+        explanation: {
+            correct: `Due azioni in corso nel passato → Past Continuous per entrambe:
+"I was reading" / "was watching".`,
+            wrong: `Il Past Simple ("read") non rende bene l’idea di due azioni contemporanee in corso. Qui serve Past Continuous.`,
+        },
+    },
+    {
+        id: 7,
+        text: "This is the place ______ we met for the first time.",
+        answers: ["where"],
+        explanation: {
+            correct: `"Where" si usa per luoghi in una relative clause:
+"This is the place where we met..."`,
+            wrong: `Per un luogo si usa "where". "Which/who" non sono corretti qui (a meno di strutture diverse).`,
+        },
+    },
+    {
+        id: 8,
+        text: "I’m tired. I ______ (work) all day.",
+        answers: ["have worked", "have been working"],
+        explanation: {
+            correct: `Risultato nel presente + durata/attività recente:
+- "have worked" (risultato: ho lavorato),
+- "have been working" (enfasi sulla durata: ho lavorato tutto il giorno).
+Entrambe corrette, con sfumature diverse.`,
+            wrong: `Con "all day" e stanchezza adesso, usare Past Simple ("worked") è meno appropriato se non specifichi un momento passato concluso (yesterday). Qui l’esercizio punta a Present Perfect.`,
+        },
+    },
+    {
+        id: 9,
+        text: "If it ______ (rain) tomorrow, we will stay at home.",
+        answers: ["rains"],
+        explanation: {
+            correct: `First Conditional: If + Present Simple, will + base form.
+Quindi: "If it rains..., we will stay..."`,
+            wrong: `Non si usa "will" nella if-clause della First Conditional. Deve essere Present Simple: rains.`,
+        },
+    },
+    {
+        id: 10,
+        text: "Be careful! You ______ (might / fall).",
+        answers: ["might fall"],
+        explanation: {
+            correct: `Modal verb + base form: might + fall.
+Significa possibilità: “potresti cadere”.`,
+            wrong: `Dopo "might" non va la -s, non va il passato, non va -ing: serve base form "fall".`,
+        },
+    },
+];
