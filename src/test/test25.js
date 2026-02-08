@@ -1,0 +1,259 @@
+// TEST 25
+
+// Present Continuous, Past Simple, Adverbs of frequency,
+// Past Continuous, Be going to, Prepositions of place
+// + verbi irregolari
+
+export const MULTIPLE_CHOICE = [
+    {
+        id: 1,
+        text: "Right now, the mechanic ____ the car engine.",
+        options: ["fixes", "is fixing", "fixed"],
+        correctIndex: 1,
+        explanation: {
+            correct:
+                `"Right now" indica un’azione in corso → Present Continuous: is fixing.`,
+            wrongByIndex: {
+                0: `"fixes" descrive un’abitudine, non ciò che sta accadendo adesso.`,
+                2: `"fixed" è Past Simple e sposta l’azione nel passato.`,
+            },
+        },
+    },
+    {
+        id: 2,
+        text: "The picture is hanging ____ the sofa in the living room.",
+        options: ["under", "on", "above"],
+        correctIndex: 2,
+        explanation: {
+            correct: `"Above" = sopra il divano, senza toccarlo.`,
+            wrongByIndex: {
+                0: `"under" = sotto, opposto al significato richiesto.`,
+                1: `"on" si usa per superfici orizzontali, non per pareti.`,
+            },
+        },
+    },
+    {
+        id: 3,
+        text: "Look at those dark clouds — we ____ get wet!",
+        options: ["will", "are going to", "got"],
+        correctIndex: 1,
+        explanation: {
+            correct:
+                `Previsione basata su prove visibili → be going to.`,
+            wrongByIndex: {
+                0: `"will" è più una decisione improvvisa, qui vediamo le nuvole.`,
+                2: `"got" è passato e non funziona con il contesto futuro.`,
+            },
+        },
+    },
+    {
+        id: 4,
+        text: "Last night I ____ asleep before 10 p.m.",
+        options: ["fall", "fell", "am falling"],
+        correctIndex: 1,
+        explanation: {
+            correct: `"Last night" → Past Simple. Fall → fell (irregolare).`,
+            wrongByIndex: {
+                0: `"fall" è presente.`,
+                2: `"am falling" è Present Continuous, non un fatto concluso.`,
+            },
+        },
+    },
+    {
+        id: 5,
+        text: "While she ____ dinner, the phone rang.",
+        options: ["cooked", "was cooking", "is cooking"],
+        correctIndex: 1,
+        explanation: {
+            correct:
+                `Azione lunga nel passato + evento → Past Continuous: was cooking.`,
+            wrongByIndex: {
+                0: `"cooked" non mostra che l’azione era in corso.`,
+                2: `"is cooking" è presente, incoerente con ‘rang’.`,
+            },
+        },
+    },
+    {
+        id: 6,
+        text: "My parents ____ travel abroad — they prefer staying home.",
+        options: ["often", "never", "always"],
+        correctIndex: 1,
+        explanation: {
+            correct:
+                `"Never" è coerente con ‘prefer staying home’.`,
+            wrongByIndex: {
+                0: `"often" contraddice il contesto.`,
+                2: `"always" è troppo forte e illogico qui.`,
+            },
+        },
+    },
+    {
+        id: 7,
+        text: "At 6 a.m., I ____ for the exam when the alarm rang.",
+        options: ["studied", "was studying", "study"],
+        correctIndex: 1,
+        explanation: {
+            correct:
+                `Ora precisa + azione in corso → Past Continuous.`,
+            wrongByIndex: {
+                0: `"studied" non rende l’idea di ‘in corso’.`,
+                2: `"study" è presente.`,
+            },
+        },
+    },
+    {
+        id: 8,
+        text: "Your keys are ____ the table, next to the laptop.",
+        options: ["in", "on", "between"],
+        correctIndex: 1,
+        explanation: {
+            correct:
+                `Oggetti appoggiati su una superficie → on the table.`,
+            wrongByIndex: {
+                0: `"in" = dentro.`,
+                2: `"between" richiede due riferimenti.`,
+            },
+        },
+    },
+    {
+        id: 9,
+        text: "Two hours ago, we ____ the match.",
+        options: ["win", "won", "are winning"],
+        correctIndex: 1,
+        explanation: {
+            correct:
+                `"Two hours ago" → Past Simple. Win → won (irregolare).`,
+            wrongByIndex: {
+                0: `"win" è presente.`,
+                2: `"are winning" è azione in corso, non conclusa.`,
+            },
+        },
+    },
+    {
+        id: 10,
+        text: "Listen! The baby ____ in the next room.",
+        options: ["cries", "is crying", "cried"],
+        correctIndex: 1,
+        explanation: {
+            correct:
+                `"Listen!" → Present Continuous: is crying.`,
+            wrongByIndex: {
+                0: `"cries" suona abituale.`,
+                2: `"cried" è passato.`,
+            },
+        },
+    },
+];
+
+export const GAP_FILL = [
+    {
+        id: 1,
+        text: "Right now, I ______ (not / watch) TV.",
+        answers: ["am not watching", "isn't watching"],
+        explanation: {
+            correct:
+                `"Right now" → Present Continuous negativo.`,
+            wrong:
+                `Serve: am not + -ing (non "isn't" con I).`,
+        },
+    },
+    {
+        id: 2,
+        text: "Last year, they ______ (take) a long trip.",
+        answers: ["took"],
+        explanation: {
+            correct:
+                `"Last year" → Past Simple. Take → took.`,
+            wrong:
+                `"taked" non esiste.`,
+        },
+    },
+    {
+        id: 3,
+        text: "He ______ (rarely / eat) junk food.",
+        answers: ["rarely eats"],
+        explanation: {
+            correct:
+                `Abitudine + 3ª persona → eats.`,
+            wrong:
+                `Con ‘he’ serve -s.`,
+        },
+    },
+    {
+        id: 4,
+        text: "While we ______ (cross) the street, it started to rain.",
+        answers: ["were crossing"],
+        explanation: {
+            correct:
+                `Azione in corso + evento → Past Continuous.`,
+            wrong:
+                `"While" richiede Past Continuous per l’azione lunga.`,
+        },
+    },
+    {
+        id: 5,
+        text: "She ______ (start) a new job next week. The contract is signed.",
+        answers: ["is going to start"],
+        explanation: {
+            correct:
+                `Piano già deciso → be going to.`,
+            wrong:
+                `Serve la struttura completa: is going to + verbo.`,
+        },
+    },
+    {
+        id: 6,
+        text: "The dog is sleeping ______ the bed.",
+        answers: ["under"],
+        explanation: {
+            correct:
+                `"Under" = sotto il letto.`,
+            wrong:
+                `"On" o "in" non descrivono la posizione corretta.`,
+        },
+    },
+    {
+        id: 7,
+        text: "Three minutes ago, I ______ (hear) a strange noise.",
+        answers: ["heard"],
+        explanation: {
+            correct:
+                `"Ago" → Past Simple. Hear → heard.`,
+            wrong:
+                `"heared" non esiste.`,
+        },
+    },
+    {
+        id: 8,
+        text: "At 9 p.m. yesterday, they ______ (dance) at the party.",
+        answers: ["were dancing"],
+        explanation: {
+            correct:
+                `Ora precisa + azione in corso → Past Continuous.`,
+            wrong:
+                `Serve were + -ing.`,
+        },
+    },
+    {
+        id: 9,
+        text: "My teacher ______ (always / be) patient.",
+        answers: ["is always"],
+        explanation: {
+            correct:
+                `Con ‘be’ → avverbio dopo il verbo: is always.`,
+            wrong:
+                `Non: always is.`,
+        },
+    },
+    {
+        id: 10,
+        text: "Look! The children ______ (run) toward us.",
+        answers: ["are running"],
+        explanation: {
+            correct:
+                `"Look!" → Present Continuous.`,
+            wrong:
+                `Serve are + -ing.`,
+        },
+    },
+];
