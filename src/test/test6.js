@@ -1,0 +1,241 @@
+// src/test/test6.js
+// Argomenti: Present Continuous, Past Simple, Adverbs of frequency,
+// Past Continuous, Be going to, Prepositions of place
+
+
+export const MULTIPLE_CHOICE = [
+    {
+        id: 1,
+        text: "Shh! The baby ____ right now.",
+        options: ["sleeps", "is sleeping", "slept"],
+        correctIndex: 1,
+        explanation: {
+            correct: `"Shh!" + "right now" indicano un’azione in corso nel presente → Present Continuous.
+Quindi: "is sleeping".`,
+            wrongByIndex: {
+                0: `"sleeps" (Present Simple) descrive abitudine o fatto generale, non un’azione “adesso”.`,
+                2: `"slept" è Past Simple: sposta l’azione nel passato e non va con "right now".`,
+            },
+        },
+    },
+    {
+        id: 2,
+        text: "Two days ago, we ____ a surprise quiz.",
+        options: ["have", "had", "are having"],
+        correctIndex: 1,
+        explanation: {
+            correct: `"Two days ago" è passato concluso → Past Simple.
+Il passato di "have" è "had".`,
+            wrongByIndex: {
+                0: `"have" è presente: non è coerente con "two days ago".`,
+                2: `"are having" è Present Continuous (presente): non va con un tempo passato concluso.`,
+            },
+        },
+    },
+    {
+        id: 3,
+        text: "He ____ checks his email in the morning; it’s part of his routine.",
+        options: ["always", "never", "rarely"],
+        correctIndex: 0,
+        explanation: {
+            correct: `Se è parte della routine, l’avverbio più coerente è "always" (sempre).
+Quindi: "He always checks..."`,
+            wrongByIndex: {
+                1: `"never" contraddice "routine": se fosse routine non sarebbe “mai”.`,
+                2: `"rarely" indica frequenza bassa, ma una routine suggerisce frequenza alta.`,
+            },
+        },
+    },
+    {
+        id: 4,
+        text: "While they ____ in the park, it started snowing.",
+        options: ["walked", "were walking", "are walking"],
+        correctIndex: 1,
+        explanation: {
+            correct: `Azione in corso nel passato + evento improvviso:
+Past Continuous ("were walking") + Past Simple ("started").`,
+            wrongByIndex: {
+                0: `"walked" (Past Simple) rende l’azione “completata”, non “in corso” mentre iniziava a nevicare.`,
+                2: `"are walking" è presente e non è coerente con la struttura al passato ("started").`,
+            },
+        },
+    },
+    {
+        id: 5,
+        text: "I ____ buy a new laptop next week. I saved enough money.",
+        options: ["am going to", "buy", "bought"],
+        correctIndex: 0,
+        explanation: {
+            correct: `Piano/intenzione futura (con motivo: ho risparmiato) → "be going to".
+Quindi: "I am going to buy..."`,
+            wrongByIndex: {
+                1: `"buy" (Present Simple) qui suona come abitudine o affermazione troppo neutra: non evidenzia l’intenzione/piano come "going to".`,
+                2: `"bought" è passato: non va con "next week" (futuro).`,
+            },
+        },
+    },
+    {
+        id: 6,
+        text: "The bus stop is ____ the supermarket and the pharmacy.",
+        options: ["between", "under", "on"],
+        correctIndex: 0,
+        explanation: {
+            correct: `Con due riferimenti si usa "between A and B".`,
+            wrongByIndex: {
+                1: `"under" significa “sotto” e non descrive una posizione tra due luoghi.`,
+                2: `"on" non si usa per “tra due posti”: si usa per superfici o giorni/piani.`,
+            },
+        },
+    },
+    {
+        id: 7,
+        text: "At the moment, our classmates ____ a project together.",
+        options: ["do", "are doing", "did"],
+        correctIndex: 1,
+        explanation: {
+            correct: `"At the moment" → Present Continuous: are doing.`,
+            wrongByIndex: {
+                0: `"do" (Present Simple) descrive abitudini, non un’attività in corso adesso.`,
+                2: `"did" è passato: non è coerente con "at the moment".`,
+            },
+        },
+    },
+    {
+        id: 8,
+        text: "Last night at 10, I ____ when you messaged me.",
+        options: ["slept", "was sleeping", "sleep"],
+        correctIndex: 1,
+        explanation: {
+            correct: `Ora specifica nel passato + azione in corso → Past Continuous: "was sleeping".
+Evento: Past Simple ("messaged").`,
+            wrongByIndex: {
+                0: `"slept" (Past Simple) non evidenzia l’azione in corso nel momento preciso in cui è arrivato il messaggio.`,
+                2: `"sleep" è presente: non è coerente con "last night at 10".`,
+            },
+        },
+    },
+    {
+        id: 9,
+        text: "She ____ goes out on weekdays because she studies a lot.",
+        options: ["usually", "seldom", "always"],
+        correctIndex: 1,
+        explanation: {
+            correct: `Se studia molto, esce raramente nei giorni feriali → "seldom" (di rado).`,
+            wrongByIndex: {
+                0: `"usually" indica frequenza alta, ma il contesto suggerisce il contrario (studies a lot).`,
+                2: `"always" è troppo assoluto e poco realistico in questo contesto.`,
+            },
+        },
+    },
+    {
+        id: 10,
+        text: "The dog is ____ the sofa, so you can’t see it.",
+        options: ["on", "under", "between"],
+        correctIndex: 1,
+        explanation: {
+            correct: `Se non lo vedi perché è sotto il divano, la preposizione corretta è "under".`,
+            wrongByIndex: {
+                0: `"on" è sopra: se fosse sul divano, probabilmente lo vedresti.`,
+                2: `"between" richiede due elementi (between A and B), non un solo oggetto.`,
+            },
+        },
+    },
+];
+
+export const GAP_FILL = [
+    {
+        id: 1,
+        text: "Look! The kids ______ (play) in the garden.",
+        answers: ["are playing"],
+        explanation: {
+            correct: `"Look!" indica un’azione in corso nel presente → Present Continuous: are playing.`,
+            wrong: `Con "Look!" si usa il Present Continuous (are + -ing). "Play/plays" suonano come abitudine, non “adesso”.`,
+        },
+    },
+    {
+        id: 2,
+        text: "Yesterday I ______ (finish) my homework early.",
+        answers: ["finished"],
+        explanation: {
+            correct: `"Yesterday" → Past Simple. Verbo regolare: finish → finished.`,
+            wrong: `Con "yesterday" serve Past Simple. Forme al presente o "finishing" non sono corrette qui.`,
+        },
+    },
+    {
+        id: 3,
+        text: "She ______ (usually / take) the bus to school.",
+        answers: ["usually takes"],
+        explanation: {
+            correct: `Avverbio di frequenza + Present Simple:
+"She" (3ª singolare) → takes. "Usually" va prima del verbo: usually takes.`,
+            wrong: `Con "she" serve -s (takes). E l’avverbio di frequenza va prima del verbo principale: usually takes.`,
+        },
+    },
+    {
+        id: 4,
+        text: "While we ______ (study), the teacher came in.",
+        answers: ["were studying"],
+        explanation: {
+            correct: `While + Past Continuous per azione in corso nel passato: were studying.
+Evento: Past Simple ("came").`,
+            wrong: `Con "while" e un evento ("came"), l’azione lunga va al Past Continuous: were studying.`,
+        },
+    },
+    {
+        id: 5,
+        text: "They ______ (go) to travel to Paris next month.",
+        answers: ["are going to go", "are going to"],
+        explanation: {
+            correct: `Piano futuro → be going to: are going to (go). Entrambe accettate.`,
+            wrong: `Qui serve "are going to". Scrivere solo "go" o usare un tempo passato non è coerente con "next month".`,
+        },
+    },
+    {
+        id: 6,
+        text: "The pen is ______ the notebook on the desk.",
+        answers: ["on"],
+        explanation: {
+            correct: `Su una superficie si usa "on": on the notebook.`,
+            wrong: `Se l’oggetto è sopra qualcosa, serve "on". "In" è dentro, "under" è sotto, "between" è tra due cose.`,
+        },
+    },
+    {
+        id: 7,
+        text: "At the moment, my parents ______ (work) from home.",
+        answers: ["are working"],
+        explanation: {
+            correct: `"At the moment" → Present Continuous: are working.`,
+            wrong: `Con "at the moment" serve Present Continuous (are + -ing), non Present Simple.`,
+        },
+    },
+    {
+        id: 8,
+        text: "Yesterday at 6 p.m. we ______ (eat) dinner when you called.",
+        answers: ["were eating"],
+        explanation: {
+            correct: `Ora specifica nel passato + azione in corso → Past Continuous: were eating.
+Evento: Past Simple ("called").`,
+            wrong: `Con "yesterday at 6 p.m." l’azione in corso va al Past Continuous (were eating), non Past Simple.`,
+        },
+    },
+    {
+        id: 9,
+        text: "My brother ______ (never / be) late for work.",
+        answers: ["is never"],
+        explanation: {
+            correct: `Con il verbo "be": is/are + avverbio.
+"My brother" → is. L’avverbio va dopo "be": is never.`,
+            wrong: `Con "be", l’avverbio di frequenza va dopo (is never). E con "my brother" serve "is", non "are".`,
+        },
+    },
+    {
+        id: 10,
+        text: "The cinema is ______ the restaurant, not far away.",
+        answers: ["near", "next to", "by"],
+        explanation: {
+            correct: `Preposizioni di vicinanza:
+near / next to / by. Senza contesto, tutte possono essere corrette.`,
+            wrong: `Qui servono preposizioni di vicinanza (near/next to/by). Preposizioni come "under/between/on" non sono coerenti.`,
+        },
+    },
+];
